@@ -99,16 +99,30 @@
 
 // numero % 2 === 0;
 
-for (let numero = 0; numero <= 100; numero++) {
-  // if (numero % 2 === 0) {
-  //   document.write("Número par " + numero + "<br>");
-  // } else {
-  //   document.write(`Número Impar ${numero} <br>`);
-  // }
-  // numero % 2 === 0
-  //   ? document.write("Número par " + numero + "<br>")
-  //   : document.write(`Número Impar ${numero} <br>`);
+// for (let numero = 0; numero <= 100; numero++) {
+//   // if (numero % 2 === 0) {
+//   //   document.write("Número par " + numero + "<br>");
+//   // } else {
+//   //   document.write(`Número Impar ${numero} <br>`);
+//   // }
+//   // numero % 2 === 0
+//   //   ? document.write("Número par " + numero + "<br>")
+//   //   : document.write(`Número Impar ${numero} <br>`);
 
-  numero % 2 === 0 && document.write("Número par " + numero + "<br>");
-  // numero % 2 === 0 ? document.write("Número par " + numero + "<br>") : "";
+//   numero % 2 === 0 && document.write("Número par " + numero + "<br>");
+//   // numero % 2 === 0 ? document.write("Número par " + numero + "<br>") : "";
+// }
+
+for (let counter = 2; counter <= 100; counter++) {
+  let isPrime = true;
+
+  for (let i = 2; i <= counter; i++) {
+    if (counter % i === 0 && i !== counter) {
+      isPrime = false;
+    }
+  }
+
+  if (isPrime) {
+    console.log(counter);
+  }
 }
