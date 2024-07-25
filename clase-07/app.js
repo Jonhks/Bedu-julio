@@ -94,8 +94,10 @@ const imagen = `
     <img src=${url}  alt='perrito'/>
   </p>`;
 
-let lista = `<ul></ul>`;
-lista += platillos.reduce((acum, current) => acum + `<li>${current}</li>`, "");
+const lista = platillos.reduce(
+  (acum, current) => acum + `<li>${current}</li>`,
+  "<ul></ul>"
+);
 
 root.innerHTML = divNuevo;
 root.insertAdjacentHTML("beforeend", imagen);
