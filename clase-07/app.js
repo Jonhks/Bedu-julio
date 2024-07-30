@@ -102,3 +102,11 @@ const lista = platillos.reduce(
 root.innerHTML = divNuevo;
 root.insertAdjacentHTML("beforeend", imagen);
 root.insertAdjacentHTML("beforeend", lista);
+
+// const btns = document.getElementsByClassName("btn");
+
+// Array.from(btns).forEach((el) =>
+//   el.addEventListener("click", () => {
+//     window.document.body.style.backgroundColor = el.id;
+//   })
+// );

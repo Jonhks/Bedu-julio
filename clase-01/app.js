@@ -105,3 +105,48 @@
 // let number = 5;
 
 // console.log(number++);
+const globo = document.getElementById("globo");
+let size;
+
+const setSize = (newSize) => {
+  size = newSize;
+  globo.style.fontSize = size + "px";
+};
+
+setSize(20);
+
+const handleArrow = (e) => {
+  if (e.key == "ArrowUp") {
+    if (size > 80) {
+      globo.textContent = "💥 BOOOOOM!!!";
+      document.body.removeEventListener("keydown", handleArrow);
+    } else {
+      setSize(size * 1.1);
+      e.preventDefault();
+    }
+  } else if (e.key == "ArrowDown") {
+    setSize(size * 0.9);
+    e.preventDefault();
+  }
+};
+
+document.body.addEventListener("keydown", handleArrow);
+
+//? 2
+
+const modal = document.getElementById("modal");
+const url = "https://picsum.photos/300/200";
+const button = document.getElementById("btn-modal");
+const modalImage = document.getElementById("modal-image");
+const close = document.getElementById("close");
+
+button.addEventListener("click", () => {
+  modal.style.display = "block";
+  modalImage.src = url;
+});
+
+close.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+//? 3
